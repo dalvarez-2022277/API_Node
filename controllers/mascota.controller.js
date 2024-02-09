@@ -52,9 +52,22 @@ const MascotasPut = async (req, res) => {
     })
 }
 
+const MascotasDelete = async (req, res) => {
+    const {id} = req.params;
+    await Mascota.findByIdAndUpdate(id,{estado: false});
+
+    const mascota = await Mascota.findOne({_id: id});
+
+    res.status(200).json({
+        msg: 'Usuario eliminado exitosamente',
+        mascota
+    });
+}
+
 module.exports = {
     MascotaPost,
     MascotasGet,
     getMascotaById,
-    MascotasPut
+    MascotasPut,
+    MascotasDelete
 }

@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const { check } = require('express-validator');
 const { validarCampos } = require('../middlewares/validar-campos');
-const { MascotaPost, MascotasGet, getMascotaById, MascotasPut} = require('../controllers/mascota.controller');
+const { MascotaPost, MascotasGet, getMascotaById, MascotasPut,MascotasDelete} = require('../controllers/mascota.controller');
 const { existeUsuarioById } = require('../helpers/db-validators');
 
 
@@ -29,6 +29,15 @@ router.post(
         check("precio", "El precio es obligatorio").not().isEmpty(),
         validarCampos,
     ], MascotaPost);
+
+    router.delete(
+        "/:id",
+        [
+            check("id","El id no es un formato válido de MongoDB").isMongoId(),
+            check("id").custom(existeUsuarioById),
+            validarCampos
+        ], MascotasDelete);
+
 
 router.put(
     "/:id",

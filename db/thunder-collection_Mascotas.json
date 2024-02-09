@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Mascotas",
+    "dateExported": "2024-02-09T17:42:13.757Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "f263b672-c756-4ff2-a0cf-04e01605510e",
+            "colId": "1c88bbe1-ad2b-4170-9db2-5af5e7f94d06",
+            "containerId": "",
+            "name": "MascotasPost",
+            "url": "http://localhost:3000/api/mascotas",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-09T14:47:53.506Z",
+            "modified": "2024-02-09T17:21:27.436Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"especie\":\"Felino\",\n  \"raza\":\"gato agora\",\n  \"nombre\":\"Kiara\",\n  \"sexo\":\"Hembra\",\n  \"edad\":\"3 año\",\n  \"condicionMedica\":\"Ninguna condicion especifica, sana\",\n  \"personalidad\":\"Enojada\",\n  \"precio\":\"700\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1d7d09e4-6c26-4c4f-b469-cf2c5aa78097",
+            "colId": "1c88bbe1-ad2b-4170-9db2-5af5e7f94d06",
+            "containerId": "",
+            "name": "MascotasGet",
+            "url": "http://localhost:3000/api/mascotas?",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-02-09T16:53:12.305Z",
+            "modified": "2024-02-09T17:25:29.177Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "15b10134-3795-4b85-8ba8-2ad8d0972f18",
+            "colId": "1c88bbe1-ad2b-4170-9db2-5af5e7f94d06",
+            "containerId": "",
+            "name": "GetMascotaById",
+            "url": "http://localhost:3000/api/mascotas/65c65f170a3dc8626c32ab9a",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-02-09T17:01:13.255Z",
+            "modified": "2024-02-09T17:26:17.401Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d20740ab-6af2-435c-b75c-456e7d9829cd",
+            "colId": "1c88bbe1-ad2b-4170-9db2-5af5e7f94d06",
+            "containerId": "",
+            "name": "MascotasPut",
+            "url": "http://localhost:3000/api/mascotas/65c65f170a3dc8626c32ab9a",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2024-02-09T17:32:23.336Z",
+            "modified": "2024-02-09T17:34:16.583Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Kiarita\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7090d6ce-f24c-4e3f-b2dc-45d5bce2511f",
+            "colId": "1c88bbe1-ad2b-4170-9db2-5af5e7f94d06",
+            "containerId": "",
+            "name": "MascotaDelete",
+            "url": "http://localhost:3000/api/mascotas/65c65f170a3dc8626c32ab9a",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-02-09T17:39:10.431Z",
+            "modified": "2024-02-09T17:39:24.340Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
