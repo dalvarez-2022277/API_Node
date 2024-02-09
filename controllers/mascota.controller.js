@@ -38,8 +38,23 @@ const MascotaPost = async (req, res) => {
     });
 }
 
+const MascotasPut = async (req, res) => {
+    const { id } = req.params;
+    const { _id, especie, raza, sexo,edad,condicionMedicam,personalidad,precio, ...resto} = req.body;
+
+    await Mascota.findByIdAndUpdate(id, resto);
+
+    const mascota = await Mascota.findOne({_id: id});
+
+    res.status(200).json({
+        msg: 'Usuario Actualizado exitosamente',
+        mascota
+    })
+}
+
 module.exports = {
     MascotaPost,
     MascotasGet,
-    getMascotaById
+    getMascotaById,
+    MascotasPut
 }
