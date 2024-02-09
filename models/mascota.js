@@ -44,8 +44,8 @@ const MascotaSchema = Schema({
 
     estado:{
         type:Boolean,
-        require: [true,"El estado es obliatorio"]
+        default:true
     }
 });
 
-module.exports = model('Mascota', MascotaSchema);
+module.exports = model('Mascota',MascotaSchema);
